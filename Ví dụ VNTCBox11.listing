@@ -1,0 +1,3 @@
+>F: = proc() # comment
+     " Hello World "
+  end proc;

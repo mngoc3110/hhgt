@@ -1,0 +1,291 @@
+\documentclass[12pt,a4]{article}
+\usepackage{lipsum}
+% Packages for font and Vietnamese support
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam}
+\usepackage[vietnamese]{babel}
+\usepackage{fontspec}  % For using system fonts
+
+% Page geometry
+\usepackage[paperheight=29.7cm,paperwidth=21cm,right=2cm,left=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage[fontsize=15pt]{scrextend}
+
+% Packages for math and graphics
+\usepackage{amsmath,amsxtra,amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{angles, decorations.shapes, arrows.meta, decorations.markings, decorations.footprints, shapes, shadings, decorations, arrows, decorations.pathmorphing, calc, fadings, shapes.geometric, shapes.misc, shadows, decorations.text, positioning, decorations.fractals, scopes, backgrounds}
+
+% Color and box packages
+\usepackage[table,dvipsnames,hyperref]{xcolor}
+\usepackage{vntcbox}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{fontawesome5}
+\usepackage{pifont}
+\usepackage[tikz]{bclogo}
+\usepackage{cancel}
+\usepackage{parnotes}
+\usepackage{setspace}
+% Header, title, and float settings
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{hyperref}  % For hyperlinks
+
+\titleformat{\section}
+  {\normalsize\normalsize\bfseries} % Chỉnh kích thước chữ cho tiêu đề
+  {\thesection}{1em}{} % Chỉnh số thứ tự của section
+\renewcommand{\theenumi}{[\arabic{enumi}]} % Change format of numbers
+\renewcommand{\thesection}{\small\arabic{section}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    pdfauthor={Tác giả},
+    pdftitle={Tiêu đề tài liệu}
+}
+
+
+% Đặt khoảng trắng bên trái cho subsection
+\titleformat{\subsection}[runin]
+  {\normalfont\bfseries} % Font và kiểu chữ
+  {}                     % Bỏ số mục
+  {1em}                  % Khoảng cách giữa số và tiêu đề
+  {\hspace{0em}}        % Khoảng thụt vào bên trái
+  \usepackage{titlesec}
+  \titlespacing*{\subsection}{0pt}{1em}{1.5em} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor[rgb]{0.168, 0.396,0.565}{\textbf{Hình học giải tích}}}
+\fancyhead[R]{\textcolor[rgb]{0.168, 0.396,0.565}{\textbf{Bài 3 - chương 2}}}
+% Đặt nội dung cho footer
+\fancyfoot[C]{\rule{\textwidth}{0.4pt}\\[1ex] % Thanh ngang
+\textcolor[rgb]{0.168, 0.396,0.565}{\textbf{Trang \thepage}} \\ % Số trang
+} % Ngày
+
+\begin{document}
+\begin{titlepage}
+  \begin{tikzpicture}[overlay,remember picture]
+      %khung lớn màu xanh
+      \draw[line width=5pt,color={rgb:red,0;green,0;blue,130}]  
+      ($ (current page.north west) + (2.0cm, -2.0cm) $)
+      rectangle
+      ($ (current page.south east) + (-2.0cm, 1.6cm) $);
+      %khung nhỏ
+      \draw[line width=1pt]
+      ($ (current page.north west) + (2.3cm, -2.3cm) $)
+      rectangle
+      ($ (current page.south east) + (-2.3cm, 1.9cm) $);
+      %khung hình vuông nhỏ(4 khung)
+      %Bên trái phía trên
+      \draw[line width=1pt]
+      ($ (current page.north west) + (1.6cm, -1.6cm) $)
+      rectangle
+      ($ (current page.south east) + (-18.7cm, 27.4cm) $);
+      %phía trên bên phải
+      \draw[line width=1pt]
+      ($ (current page.north west) + (19.4cm, -1.6cm) $)
+      rectangle
+      ($ (current page.south east) + (-2.3cm, 27.4cm) $);
+      %phía dưới bên trái
+      \draw[line width=1pt]
+      ($ (current page.north west) + (1.6cm, -27.8cm) $)
+      rectangle
+      ($ (current page.south east) + (-18.7cm, 1.2cm) $);
+      %phía dưới bên phải 
+      \draw[line width=1pt]
+      ($ (current page.north west) + (19.4cm, -27.8cm) $)
+      rectangle
+      ($ (current page.south east) + (-2.3cm, 1.2cm) $);
+      %các đường trang trí
+      \draw[line width=0.7pt] (-0.05, 1) -- (16, 1);
+      \draw[line width=0.7pt] (-0.05, -26.4) -- (16, -26.4);
+      \draw[line width=0.7pt] (-1.2, -0.15) -- (-1.2, -25.25);
+      \draw[line width=0.7pt] (17.15, -0.15) -- (17.15, -25.25);
+
+      \draw[line width=0.7pt] (-1.2, -0.15) -- (-0.05, -0.15);
+      \draw[line width=0.7pt] (-0.05, 1.01) -- (-0.05, -0.16);
+
+      \draw[line width=0.7pt] (17.162, -0.15) -- (16, -0.15);
+      \draw[line width=0.7pt] (16, 1.012) -- (16, -0.16);
+
+      \draw[line width=0.7pt] (-1.21, -25.25) -- (-0.05, -25.25 );
+      \draw[line width=0.7pt] (-0.05, -25.25) -- (-0.05, -26.41);
+
+      \draw[line width=0.7pt] (17.162, -25.25) -- (16, -25.25 );
+      \draw[line width=0.7pt] (16, -25.24) -- (16, -26.41);
+  \end{tikzpicture}
+ 
+  %nội dung trong khung
+  \begin{center}
+      TRƯỜNG ĐẠI HỌC SƯ PHẠM THÀNH PHỐ HỒ CHÍ MINH\\
+      \vspace{0.2cm}
+      KHOA TOÁN - TIN HỌC\\
+      \begin{tikzpicture}
+          \draw[thick, line width=0.7pt] (0,0) -- (4.7,0);
+          \draw[thick, line width=0.7pt] (5.3,0) -- (10,0);
+          \draw (5,0) node {*};
+      \end{tikzpicture}
+  \end{center}
+  \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=north] at ($(current page.north) - (2.5cm, 7cm)$) {
+          \includegraphics[height=3cm]{image/DHSP.png}
+      };
+      \node[anchor=north] at ($(current page.north) - (-3.5cm, 6cm)$) {
+          \includegraphics[height=4cm]{image/khoa_toan.png}
+      };
+  \end{tikzpicture}
+  
+  \vspace{6cm}
+  \begin{center}
+      {\LARGE\textbf{Tiểu luận giữa kì}}\\
+      \vspace{0.5cm}
+      Hình học giải tích\\
+      \vspace{7cm}
+      Giảng viên hướng dẫn: TS.Cao Trần Tứ Hải\\
+      \vspace{2cm}
+      Thành phố Hồ Chí Minh, ngày 6 tháng 1 năm 2024
+  \end{center}
+  \newpage
+  % Thiết lập tiêu đề "Mục lục" với màu xanh
+\renewcommand\contentsname{\textcolor{blue}{\textbf{Mục lục}}}
+
+% Tạo mục lục
+\tableofcontents
+\newpage
+% Nội dung giả lập để mục lục hoạt động chính xác
+
+\section{Danh sách thành viên nhóm 6}
+\begin{tabular}{|c|l|c|l|}
+    \hline
+    \textbf{Số thứ tự} & \textbf{Họ và tên} & \textbf{Mã số sinh viên} & \textbf{Chức vụ} \\ \hline
+    1 & Lê Trọng Chí & 50.01.101.007 & Nhóm trưởng \\ \hline
+    2 & Nguyễn Lê Minh Ngọc & 48.01.103.056 & Thành viên \\ \hline
+    3 & Phạm Gia Hân & 50.01.101.018 & Thành viên \\ \hline
+    \end{tabular}
+\newpage
+\section{Nội dung phân công công việc}
+\begin{tabular}{|c|l|l|}
+    \hline
+    \textbf{Số thứ tự} & \textbf{Họ và tên} & \textbf{Nội dung phân công} \\ \hline
+    1 & Lê Trọng Chí & Bài tập 5 \\ \hline
+    2 & Nguyễn Lê Minh Ngọc & Bài tập 7, biên soạn \LaTeX \\ \hline
+    3 & Phạm Gia Hân & Bài tập 6 \\ \hline
+    \end{tabular}
+    \newpage
+\section{Lời mở đầu}
+phạm gia hân tự viết
+\section{Khái niệm cơ bản về phương pháp toạ độ}
+\subsection{Phương pháp toạ độ trong mặt phẳng}
+\begin{itemize}
+    \item \textbf{Mục tiêu anffine}\\
+    Trong không gian cho điểm O và 2 vector $\vec{OI} = \vec{i}, \vec{OJ} = \vec{j}$ không cùng phương. Tập hợp gồm điểm O và hai vector $\vec{i},\vec{j}$ được gọi là hệ toạ độ \textbf{affine} trong mặt phẳng. Khi đó:\\
+    \begin{enumerate}
+        \item Đường thẳng $Ox$ đi qua điểm $O$ và điểm $I$ gọi là trục hoành, đường thẳng $Oy$ đi qua điểm $O$ và điểm $J$ gọi là trục tung.\\
+        \item Điểm $O$ gọi là gốc toạ độ. Hệ toạ độ \textbf{affine} như vậy được ký hiệu là: $O\vec{i}\vec{j}$ hoặc $Oxy$.\\
+        nhớ vẽ hình.
+        \item Với mỗi vector $\vec{u}$ bất kỳ trong không gian, tồn tại duy nhất một bộ số $(x,y)$ sao cho:
+        \[
+            \vec{u} = x\vec{i} + y\vec{j}
+        \]
+        Khi đó, $(x,y)$ được gọi là toạ độ của vector $\vec{u}$, ký hiệu: $\vec{u}(x,y)$ hoặc $\vec{u} = (x,y)$.
+        \item Với mỗi điểm $M$ bất kỳ trong không gian, gọi $(x,y)$ là toạ độ của vector $\overrightarrow{OM}$, nghĩa là:
+        \[
+            \overrightarrow{OM} = x\vec{i} + y\vec{j}
+        \]
+        Khi đó, $(x,y)$ cũng được gọi là toạ độ của điểm $M$, kí hiệu: $M(x,y)$ hoặc $M = (x,y)$.
+        \item Cho điểm $M(x,y) \text{ và } M'(x',y')$ thì ta có:
+        \[
+            \overrightarrow{MM'} = (x' - x, y' - y)
+        \]
+    \end{enumerate} 
+    Trong hệ toạ độ \textbf{anffine} $O\vec{i}\vec{j}$, cho 2 vector $\vec{u}(x_1,y_1) \text{ và } \vec{v}(x_2,y_2).$ Khi đó, ta có các tính chất cơ bản sau:\\
+    \begin{enumerate}
+        \item $\vec{u} + \vec{v} = (x_1 + x_2)\vec{i} + (y_1 + y_2)\vec{j} = (x_1 + x_2, y_1 + y_2)$
+        \item $\vec{u} = \vec{v} \Leftrightarrow x_1\vec{i} + y_1\vec{j} = x_2\vec{i} + y_2\vec{j} \Leftrightarrow \begin{cases}
+            x_1 = x_2\\
+            y_1 = y_2
+        \end{cases}$
+        \item $\vec{u}$ cùng phương $\vec{v} \Leftrightarrow \vec{u} = t\vec{v}$\\
+        $\Leftrightarrow x_1 \vec{i} + y_1\vec{j} = tx_2\vec{i} + ty_2\vec{j}$\\
+        $\Leftrightarrow \begin{cases}
+            x_1 = tx_2\\
+            y_1 = ty_2\\
+        \end{cases}$\\
+        Nếu $t > 0$ thì $\vec{u},\vec{v}$ cùng hướng.\\
+        Nếu $t < 0$ thì $\vec{u},\vec{v}$ ngược hướng.
+    \end{enumerate}
+    \textbf{Phép đổi mục tiêu}\\
+    Trong không gian, cho 2 hệ toạ độ \textbf{anffine} $O\vec{i}\vec{j}$ và $O'\vec{i'}\vec{j'}$. Giả sử đối với hệ toạ độ $O\vec{i}\vec{j}$, điểm $O'$ có toạ độ $(a_0,b_0),$ $\vec{i} = (a_1,b_1),\vec{j} = (a_2,b_2).$ đối với một điểm $M$ bất kì, gọi $(,y)$ là toạ độ của $M$ đối với hệ $O\vec{i}\vec{j}$ là $M(x',y')$ đối với hệ $O'\vec{i'}\vec{j'}$. Ta tìm sự liên hệ giữa các số $,y$ và $x',y'$. Theo định nghĩa của toạ độ vector và toạ độ điểm ta có:
+    \[
+        \begin{cases}
+            x = a_1x' + a_2 y' + a_0\\
+            y = b_1x' + b_2 y' + b_0\\
+        \end{cases}
+    \]
+    Viết dưới dạng ma trận:
+    \[
+        \begin{pmatrix}
+            x\\
+            y
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            a_1 & a_2\\
+            b_1 & b_2
+        \end{pmatrix}
+        \begin{pmatrix}
+            x'\\
+            y'
+        \end{pmatrix}
+        +
+        \begin{pmatrix}
+        a_0\\
+        b_0
+        \end{pmatrix}
+    \]
+    \textbf{Trường hợp đặc biệt: Phép tịnh tiến mục tiêu:}
+    Với $(a_1, b_1) = (1,0)$ và $(a_2, b_2) = (0,1)$, đẳng thức trên trở thành:  
+    \[
+        \begin{pmatrix}
+            x\\
+            y
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            1& 0\\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            x'\\
+            y'
+        \end{pmatrix}
+        +
+        \begin{pmatrix}
+        a_0\\
+        b_0
+        \end{pmatrix}
+    \]
+    \[
+    \Leftrightarrow \begin{cases}
+            x = x' + a_0\\
+            y = y' + b_0
+        \end{cases}
+    \]
+    Đây là công thức chuyển trục phép tịnh tiến từ $O\vec{i}\vec{j}$ sang $O'\vec{i}\vec{j}$
+    \item \textbf{Mục tiêu trực chuẩn}\\
+    Hệ toạ độ trực chuẩn là hệ toạ độ \textbf{anffine} $O\vec{i}\vec{j}$
+\end{itemize}
+\subsection{Phương pháp tọa độ trong không gian}
+\begin{itemize}
+    \item Mục tiêu anffine\\
+    \item Mục tiêu trực chuẩn\\
+\end{itemize}
+\subsection{Cách chọn mục tiêu}
+\section{Các dạng bài tập}
+\section{Bài tập làm thêm}
+\section{Tài liệu tham khảo}
+\end{titlepage}
+\end{document}

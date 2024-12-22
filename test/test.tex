@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=2]
+
+% Vẽ trục tọa độ
+\draw[->] (-0.5,0) -- (3.5,0) node[anchor=north] {$x$};
+\draw[->] (0,-0.5) -- (0,3.5) node[anchor=east] {$y$};
+
+% Vẽ điểm O và vector i, j
+\coordinate (O) at (0,0);
+\coordinate (i) at (1,0);
+\coordinate (j) at (0,1);
+\draw[->] (O) -- (i) node[anchor=north] {$i$};
+\draw[->] (O) -- (j) node[anchor=east] {$j$};
+
+% Các điểm M, Mx, My
+\coordinate (M) at (3,2);
+\coordinate (Mx) at (3,0);
+\coordinate (My) at (0,2);
+
+% Vẽ các đường thẳng từ gốc O tới M
+\draw[->] (O) -- (M) node[anchor=south east] {$M$};
+
+% Đường kẻ đứt ngang và dọc
+\draw[dotted] (M) -- (Mx);
+\draw[dotted] (M) -- (My);
+
+% Kẻ từ Mx và My
+\draw[->] (O) -- (Mx) node[anchor=north] {$M_x$};
+\draw[->] (O) -- (My) node[anchor=east] {$M_y$};
+
+% Đánh dấu các điểm
+\filldraw (O) circle (1pt) node[anchor=north east] {$O$};
+\filldraw (M) circle (1pt);
+\filldraw (Mx) circle (1pt);
+\filldraw (My) circle (1pt);
+
+\end{tikzpicture}
+
+\end{document}

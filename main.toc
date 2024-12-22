@@ -1,11 +1,10 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {section}{\numberline {\small 1}Danh sách thành viên nhóm 6}{3}{section.1}%
+\contentsline {section}{\numberline {\small 1}Danh sách thành viên nhóm}{3}{section.1}%
 \contentsline {section}{\numberline {\small 2}Nội dung phân công công việc}{4}{section.2}%
 \contentsline {section}{\numberline {\small 3}Lời mở đầu}{5}{section.3}%
-\contentsline {section}{\numberline {\small 4}Khái niệm cơ bản về phương pháp toạ độ}{5}{section.4}%
-\contentsline {subsection}{\numberline {\small 4.1}Phương pháp toạ độ trong mặt phẳng}{5}{subsection.4.1}%
-\contentsline {subsection}{\numberline {\small 4.2}Phương pháp tọa độ trong không gian}{6}{subsection.4.2}%
-\contentsline {subsection}{\numberline {\small 4.3}Cách chọn mục tiêu}{7}{subsection.4.3}%
-\contentsline {section}{\numberline {\small 5}Các dạng bài tập}{7}{section.5}%
-\contentsline {section}{\numberline {\small 6}Bài tập làm thêm}{7}{section.6}%
-\contentsline {section}{\numberline {\small 7}Tài liệu tham khảo}{7}{section.7}%
+\contentsline {section}{\numberline {\small 4}Phương pháp toạ độ trong mặt phẳng}{5}{section.4}%
+\contentsline {section}{\numberline {\small 5}Phương pháp toạ độ trong không gian}{19}{section.5}%
+\contentsline {section}{\numberline {\small 6}Cách chọn mục tiêu}{37}{section.6}%
+\contentsline {section}{\numberline {\small 7}Các dạng bài tập}{39}{section.7}%
+\contentsline {section}{\numberline {\small 8}Bài tập làm thêm}{41}{section.8}%
+\contentsline {section}{\numberline {\small 9}Tài liệu tham khảo}{41}{section.9}%
